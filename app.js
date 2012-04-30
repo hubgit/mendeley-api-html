@@ -1,7 +1,8 @@
 $("form").on("submit", function(event) {
 	event.preventDefault();
 
-	var formToSubmit = $(this).clone();
+	var form = $(this);
+	var formToSubmit = form.clone();
 	$("<input/>", { name: "consumer_key", value: "b50cdbc339ff498c436da1ebc84a476a04c1dec86" }).appendTo(formToSubmit);
 
 	// replace the placeholders in the form action URI template, and remove those inputs from the form
@@ -13,6 +14,11 @@ $("form").on("submit", function(event) {
 		node.remove();
 		return value;
 	}));
+
+	form.find("select").each(function() {
+		var select = $(this);
+		formToSubmit.find("select[name=" + select.attr("name") + "]").val(select.val());
+	});
 
 	formToSubmit.submit();
 });
@@ -31,10 +37,11 @@ $(".example").on("click", function(event) {
 	example.closest("form").submit();
 });
 
-$("input[name=cat]").each(function() {
+$("input[name=cat],input[name=discipline]").each(function() {
 	var input = $(this);
 	$.getJSON("categories.json", function(data) {
-		var select = $("<select/>", { name: input.attr("name") })
+		var select = $("<select/>", { name: input.attr("name") });
+		if (!input.attr("required")) $("<option/>", { value: "", text: "All Categories" }).appendTo(select);
 		data.forEach(function(item) {
 			$("<option/>", { value: item.id, text: item.name }).appendTo(select);
 		});
