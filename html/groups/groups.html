@@ -1,0 +1,8 @@
+<div class="description">List all public groups [in a specific category]</div>
+
+<form method="get" action="http://api.mendeley.com/oapi/documents/groups/">
+	<label>Category <input name="cat" type="number" pattern="[0-9]{1,2}"></label>
+	<label>Number of items <input name="items" type="number" min="1" value="20"></label>
+	<label>Page <input name="page" type="number" min="0" max="1000" value="0"></label>
+	<input class="btn btn-primary" type="submit" value="GET">
+</form>

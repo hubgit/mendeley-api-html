@@ -1,0 +1,10 @@
+<div class="description">List documents tagged with a specific tag</div>
+
+<form method="get" action="http://api.mendeley.com/oapi/documents/tagged/{tag}/">
+	<label>Tag <input name="tag" type="text" placeholder="Enter a tag" size="30" required data-example="immunology"></label>
+	<label>Category <input name="cat" type="number" pattern="[0-9]{1,2}"></label>
+	<label>Subcategory <input name="subcat" type="number" pattern="[0-9]{1,2}"></label>
+	<label>Number of items <input name="items" type="number" min="1" value="20"></label>
+	<label>Page <input name="page" type="number" min="0" value="0"></label>
+	<input class="btn btn-primary" type="submit" value="GET">
+</form>

@@ -1,0 +1,17 @@
+<div class="description">Details for a specific document</div>
+
+<form method="get" action="http://api.mendeley.com/oapi/documents/details/{id}/">
+	<label>Document ID <input type="text" name="id" placeholder="Enter a document id" required data-example="10.1371/journal.pone.0036014"></label>
+
+	<label>Type of ID <select name="type">
+		<option value="arxiv">Arxiv</option>
+		<option value="doi" selected>DOI</option>
+		<option value="isbn">ISBN</option>
+		<option value="" >Mendeley</option>
+		<option value="pmid">PMID</option>
+		<option value="scopus">Scopus</option>
+		<option value="ssm">SSM</option>
+	</select></label>
+
+	<input class="btn btn-primary" type="submit" value="GET">
+</form>

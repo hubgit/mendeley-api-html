@@ -1,0 +1,9 @@
+<div class="description">List documents with a matching author name</div>
+
+<form method="get" action="http://api.mendeley.com/oapi/documents/authored/{name}/">
+	<label>Author name <input name="name" type="text" placeholder="Enter an author name" size="30" required data-example="Crick F"></label>
+	<!--<label>Year <input name="year" type="number" pattern="[0-9]{4}"></label>-->
+	<label>Number of items <input name="items" type="number" min="1" value="20"></label>
+	<label>Page <input name="page" type="number" min="0" value="0"></label>
+	<input class="btn btn-primary" type="submit" value="GET">
+</form>

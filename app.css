@@ -1,0 +1,38 @@
+header h1 {
+	margin: 20px 0;
+}
+
+label {
+	display: block;
+	padding: 5px;
+}
+
+form {
+	padding: 5px;
+}
+
+dl {
+	margin-left: 5px;
+}
+
+.example {
+	display: inline-block;
+	cursor: help;
+	background: #eee;
+	border: 1px solid #f6f6f6;
+	margin-left: 10px;
+	text-decoration: none;
+	color: #444;
+	padding: 0 5px;
+}
+
+.example:before {
+	content: "Example: ";
+}
+
+.description {
+	padding: 10px;
+	margin: 10px 0;
+	background: #f6f6ff;
+	color: #444;
+}

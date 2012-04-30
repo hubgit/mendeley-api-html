@@ -1,0 +1,6 @@
+<div class="description">List all subcategories [within a category]</div>
+
+<form method="get" action="http://api.mendeley.com/oapi/documents/subcategories/{cat}/">
+	<label>Category <input name="cat" type="number" pattern="[0-9]{1,2}" required data-example="1"></label>
+	<input class="btn btn-primary" type="submit" value="GET">
+</form>
