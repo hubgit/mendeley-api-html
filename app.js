@@ -12,7 +12,7 @@ $("form").on("submit", function(event) {
 
 		var value = node.val();
 		node.remove();
-		return value;
+		return encodeURIComponent(value);
 	}));
 
 	form.find("select").each(function() {
