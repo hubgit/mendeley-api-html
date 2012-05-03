@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Mendeley API Explorer</title>
-	<base href="http://local/2012/04/mendeley-api-html/"></base>
+	<base href="http://apps.hubmed.org/mendeley-api/"></base>
 	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
 	<link rel="stylesheet" href="app.css">
 </head>
