@@ -1,7 +1,7 @@
 <div class="description">Details for a specific document</div>
 
 <form method="get" action="http://api.mendeley.com/oapi/documents/details/{id}/">
-	<label>Document ID <input type="text" name="id" placeholder="Enter a document id" required data-example="10.1371/journal.pone.0036014"></label>
+	<label>Document ID <input type="text" name="id" placeholder="Enter a document id" required data-example="10.1371%2Fjournal.pone.0030489"></label>
 
 	<label>Type of ID <select name="type">
 		<option value="arxiv">Arxiv</option>
@@ -15,3 +15,5 @@
 
 	<input class="btn btn-primary" type="submit" value="GET">
 </form>
+
+<p>Note: there's a bug in the API, so DOIs must be URL-encoded (convert / to %2F) before submitting.</p>
