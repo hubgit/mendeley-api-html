@@ -20,6 +20,12 @@ $("form").on("submit", function(event) {
 		formToSubmit.find("select[name=" + select.attr("name") + "]").val(select.val());
 	});
 
+	formToSubmit.find("input,select").each(function(index, node) {
+		var node = $(node);
+
+		if (!node.val()) node.remove();
+	});
+
 	formToSubmit.submit();
 });
 
@@ -32,7 +38,7 @@ $(".example").on("click", function(event) {
 	event.preventDefault();
 
 	var example = $(this);
-	example.prev("input|select").val(example.text());
+	example.prev("input,select").val(example.text());
 
 	example.closest("form").submit();
 });
